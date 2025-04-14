@@ -1,3 +1,16 @@
 # Ignorar archivos compilados de Python
 *.pyc
 __pycache__/
+
+# Archivos de entorno virtual
+venv/
+env/
+
+# Archivos de configuración local
+.env
+
+# Archivos de bases de datos locales
+db.sqlite3
+
+# Archivos estáticos generados
+staticfiles/
