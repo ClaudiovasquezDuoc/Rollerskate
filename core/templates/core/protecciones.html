@@ -1,0 +1,286 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>Protecciones</title>
+</head>
+<body>
+    <header>
+        <!--TITULO o LOGO-->
+        <div class="container-fluid" id="con_header">
+            <div class="row allign-items-center">
+                <div class="col mx-5">
+                    <a href="https://www.youtube.com/watch?v=DbH0_xqR26c&t=81s" title="video demostración" target="_blank">
+                        <img class="h-100 d-inline-block"  style="width: 150px;" src="img//Diseño_sin_título-removebg-preview.png" alt="logo mercado libre ">
+                    </a>
+                    <!-- Button to trigger the modal -->
+                </div>
+                <div class="col my-5 mx-5 d-flex position-relative justify-content-end">
+                    <div class="btn-group" role="group" aria-label="btn-session">                   
+                        <button type="button" class="btn btn-outline-dark text-success" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Iniciar Sesion
+                        </button>
+                        <button type="button" class="btn btn-outline-dark text-success" data-bs-toggle="modal" data-bs-target="#crearCuenta">
+                        Crear Cuenta
+                        </button>
+                        <div class="col">
+                            <!-- Modal window start session-->
+                            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content mt-5">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="loginModalLabel">Iniciar Sesion</h5>
+                                            <button type="button" type="btn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="loginForm">
+                                            <div class="mb-3">
+                                                <label for="username" class="form-label">Usuario</label>
+                                                <input type="text" class="form-control" id="username" placeholder="Ej:usuario1234">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="password" class="form-label">Contraseña</label>
+                                                <input type="password" class="form-control" id="password" placeholder="*****" aria-hidden="true">
+                                            </div>
+                                            <button type="submit" class="btn btn-dark">Confirmar</button>                            
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Modal window crear usuario-->
+            <div class="modal fade" id="crearCuenta" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content mt-5">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="loginModalLabel1">Iniciar Sesion</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                    <div class="modal-body">
+                        <form id="createUserForm">
+                        <div class="mb-3 ">
+                            <label for="username" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="user" placeholder="Ej:usuario1234" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter your username (e.g. john.doe)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="pass" placeholder="*****" aria-hidden="true">
+                        </div>                
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">Direccion</label>
+                            <input type="text" class="form-control" id="direccion" placeholder="Ej:las perdices 1234">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contacto" class="form-label">Contacto</label>
+                            <input type="text" class="form-control" id="contacto" placeholder="+5696123456">
+                        </div>
+                        <button type="submit" class="btn btn-dark">Crear Cuenta</button>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Barra de navegacion-->
+            <div class="container-fkuid">
+                <div class="row">
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="index.html">RollerSkate</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarScroll">
+                                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                                    <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Categorias
+                                    </a>
+                                    <ul class="dropdown-menu p-3 dropdown-menu-dark">
+                                        <li><a class="dropdown-item" aria-labelledby="dropdownMenuButton2" href="vestimenta.html">Vestimenta</a></li>
+                                        <li><a class="dropdown-item" href="protecciones.html">Protecciones</a></li>
+                                        <li><a class="dropdown-item" href="patines.html">Patines en linea</a></li>
+                                        <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
+                                        <li><a class="dropdown-item" href="repuestos.html">Repuestos</a></li>
+                                    </ul>
+                                    <li class="nav-item">
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="servicio.html">Servicio al cliente</a>
+                                    </li>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link disabled" aria-disabled="true">Cyberday</a>
+                                    </li>
+                                </ul>
+                                <!-- Buscador-->
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search">
+                                    <button class="btn btn-dark" type="submit">
+                                        <i class="fa-solid fa-magnifying-glass"></i>Buscar
+                                    </button>
+                                </form>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!--Productos en venta-->
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Accesorios para patinar</h1>
+        <div class="row" id="productos-container">
+
+        </div>
+    </div>    
+            
+    <!-- Carrito de Compras -->
+    <div class="container mt-5"></div>
+        <h2 class="text-center">🛒 Carrito de Compras</h2>
+        <ul class="list-group mb-3" id="carrito-lista"></ul>
+        <p class="fw-bold text-center">Total: <span id="total-carrito">$0</span></p>
+        <div class="text-center">
+            <button class="btn btn-success" onclick="realizarCompra()">Finalizar Compra</button>
+            <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        </div>
+    </div> 
+
+    <script>
+        // Productos disponibles
+        const productos = [
+            { id: 13, nombre: "Casco Oxelo Blanco", precio: 19990, img: "img/protecciones/casco1.jpeg" },
+            { id: 14, nombre: "Casco Oxelo Negro", precio: 19990, img: "img/protecciones/casco2.jpeg" },
+            { id: 15, nombre: "Casco Oxelo Rosa", precio: 19990, img: "img/protecciones/casco3.jpeg" },
+            { id: 16, nombre: "Casco Oxelo Black Light", precio: 29990, img: "img/protecciones/casco4.jpg" },
+            { id: 17, nombre: "Coderas 187", precio: 7990, img: "img/protecciones/coderas1.jpeg" },
+            { id: 18, nombre: "Guantes para deslizar", precio: 29990, img: "img/protecciones/guantes_deslizantes1.jpg" },
+            { id: 19, nombre: "Rodilleras Smith AP Rosa", precio: 27500, img: "img/protecciones/rodillera2.png" },
+            { id: 20, nombre: "Rodilleras REKD", precio: 32500, img: "img/protecciones/rodilleras1.jpg" },
+            { id: 21, nombre: "Set protecciones generic", precio: 19500, img: "img/protecciones/set_proteccion1.jpg" },
+            { id: 22, nombre: "Set protecciones Micro", precio: 29500, img: "img/protecciones/set_proteccion2.jpg" }
+        ];
+
+        let carrito = [];
+
+        // Cargar productos en la tienda
+        function cargarProductos() {
+            const contenedor = document.getElementById("productos-container");
+            productos.forEach(producto => {
+                contenedor.innerHTML += `
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                        <div class="card">
+                            <img src="${producto.img}" class="card-img-top" alt="${producto.nombre}">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">${producto.nombre}</h5>
+                                <p class="card-text text-success fw-bold">$${producto.precio.toLocaleString()}</p>
+                                <button class="btn btn-primary" onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Agregar producto al carrito
+        function agregarAlCarrito(id) {
+            const producto = productos.find(p => p.id === id);
+            const productoEnCarrito = carrito.find(p => p.id === id);
+
+            if (productoEnCarrito) {
+                productoEnCarrito.cantidad++;
+            } else {
+                carrito.push({ ...producto, cantidad: 1 });
+            }
+
+            actualizarCarrito();
+        }
+
+        // Actualizar la vista del carrito
+        function actualizarCarrito() {
+            const listaCarrito = document.getElementById("carrito-lista");
+            const totalCarrito = document.getElementById("total-carrito");
+            listaCarrito.innerHTML = "";
+            let total = 0;
+
+            carrito.forEach(producto => {
+                total += producto.precio * producto.cantidad;
+                listaCarrito.innerHTML += `
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        ${producto.nombre} - $${producto.precio.toLocaleString()} x ${producto.cantidad}
+                        <button class="btn btn-danger btn-sm" onclick="eliminarDelCarrito(${producto.id})">❌</button>
+                    </li>
+                `;
+            });
+
+            totalCarrito.innerText = `$${total.toLocaleString()}`;
+        }
+
+        // Eliminar un producto del carrito
+        function eliminarDelCarrito(id) {
+            carrito = carrito.filter(p => p.id !== id);
+            actualizarCarrito();
+        }
+
+        // Vaciar carrito
+        function vaciarCarrito() {
+            carrito = [];
+            actualizarCarrito();
+        }
+
+        // Simulación de compra
+        function realizarCompra() {
+            if (carrito.length === 0) {
+                alert("Tu carrito está vacío.");
+                return;
+            }
+            alert("¡Compra realizada con éxito! Gracias por tu compra.");
+            vaciarCarrito();
+        }
+
+        // Cargar productos al cargar la página
+        cargarProductos();
+    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tienda RollerSkate - Todos los derechos reservados</p>
+            <p>
+                <a href="mailto:tiendaroller@gmail.com" class="text-warning">
+                    <i class="fa-solid fa-envelope"></i> Contacto
+                </a> |
+                <a href="https://www.instagram.com/tu_tienda" class="icon-instagram" target="_blank">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a> |
+                <a href="https://www.facebook.com/tu_tienda" class="text-warning">
+                    <i class="fa-brands fa-facebook"></i> Facebook
+                </a>
+            </p>
+        </div>
+    </footer>
+
+
+    
+
+
+
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
