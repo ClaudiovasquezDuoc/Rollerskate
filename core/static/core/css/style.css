@@ -1,27 +1,36 @@
+*{
+    min-height: 100vh;
+}
+
 /* Ajuste del header */
 header {
     position: static;
     height: 250px;
+    padding: 0;
 
 }
 body{
-
+    margin: 0;
+    padding-top: 56px;
     width: 100%;
-    height: 350PX;
+    height: 850px;
 }
 /* Contenedor principal */
 .container-fluid {
-    position: relative;
+    position: static;
 }
 
 /* Estilos del carrusel */
 .c-item {
-    height: 600px; 
+    height: 500px;
+    position: relative; 
     
 }
 .c-img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
+    object-position: center;
     filter: brightness(0.6);
 }
 
@@ -51,7 +60,7 @@ body{
 /* Cuerpo de la tarjeta */
 .card-body {
     flex-grow: 1;
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
@@ -59,7 +68,7 @@ body{
 
 /* Ajuste de los botones dentro de las tarjetas */
 .card-body button {
-    margin-top: 5px;
+    padding-top: 5px;
 }
 
 /* Alineación de los productos en filas */
@@ -78,15 +87,6 @@ body{
 .btn {
     border-radius: 5px;
     font-weight: bold;
-}
-
-.c-item{
-    height: 480px;
-}
-.c-img{
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
 }
 .is-invalid {
     border-color: #dc3545;
@@ -115,7 +115,7 @@ body{
 }
 
 /* Footer */
-footer {
+.footer {
     background: #0d0d0d;
     color: white;
     text-align: center;
@@ -154,10 +154,32 @@ footer {
     color: #ffa500;
 }
 
-@include media-breakpoint-up(md) {
-    #carouselNoticias{
-    margin: 30px auto;
-    max-width: 1200px;
+/* Estilos para pantallas pequeñas */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .c-item {
+        height: 200px;
     }
 }
 
+/* Estilos para pantallas medianas */
+@media (min-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .c-item {
+        height: 200px;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1200px) {
+    .navbar-brand {
+        font-size: 2rem;
+    }
+    .c-item {
+        height: 200px;
+    }
+}

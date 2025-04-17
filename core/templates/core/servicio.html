@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href={% static 'core/css/style.css' %}>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -18,7 +18,7 @@
             <div class="row allign-items-center">
                 <div class="col mx-5">
                     <a href="https://www.youtube.com/watch?v=DbH0_xqR26c&t=81s" title="video demostración" target="_blank">
-                        <img class="h-100 d-inline-block"  style="width: 150px;" src="img//Diseño_sin_título-removebg-preview.png" alt="logo mercado libre ">
+                        <img class="h-100 d-inline-block"  style="width: 150px;" src={% static 'core/img/Diseño_sin_título-removebg-preview.png' %} alt="logo mercado libre ">
                     </a>
                     <!-- Button to trigger the modal -->
                 </div>
@@ -108,7 +108,7 @@
                 <div class="col">
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                         <div class="container-fluid">
-                            <a class="navbar-brand" href="index.html">RollerSkate</a>
+                            <a class="navbar-brand" href={% url 'home' %}>RollerSkate</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                             </button>
@@ -119,16 +119,16 @@
                                     Categorias
                                 </a>
                                 <ul class="dropdown-menu p-3 dropdown-menu-dark">
-                                    <li><a class="dropdown-item" aria-labelledby="dropdownMenuButton2" href="vestimenta.html">Vestimenta</a></li>
-                                    <li><a class="dropdown-item" href="protecciones.html">Protecciones</a></li>
-                                    <li><a class="dropdown-item" href="patines.html">Patines en linea</a></li>
-                                    <li><a class="dropdown-item" href="accesorios.html">Accesorios</a></li>
-                                    <li><a class="dropdown-item" href="repuestos.html">Repuestos</a></li>                                   
+                                    <li><a class="dropdown-item" aria-labelledby="dropdownMenuButton2" href={% url 'vestimenta' %}>Vestimenta</a></li>
+                                    <li><a class="dropdown-item" href={% url 'protecciones' %}>Protecciones</a></li>
+                                    <li><a class="dropdown-item" href={% url 'patines' %}>Patines en linea</a></li>
+                                    <li><a class="dropdown-item" href={% url 'accesorios' %}>Accesorios</a></li>
+                                    <li><a class="dropdown-item" href={% url 'repuestos' %}>Repuestos</a></li>                                   
                                 </ul>
                                 <li class="nav-item">
                                 </li>
                                 <li class="nav-item">
-                                <a class="nav-link" href="#">Servicio al cliente</a>
+                                <a class="nav-link" href={% url 'servicio' %}>Servicio al cliente</a>
                                 </li>
                                 </li>
                                 <li class="nav-item">
