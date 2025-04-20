@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={% static 'core/css/style.css' %}>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -160,15 +160,18 @@
     </div> 
 
     <script>
-        // Productos disponibles
         const productos = [
-            {id: 7, nombre: "Conos FR", precio: 11990, img:{% static 'core/img/accesorios/conos1.png' %}},
-            {id: 8, nombre: "Funda protectora de ruedas", precio: 4990, img:{% static 'core/img/accesorios/funda_rueda1.jpg' %}},
-            {id: 9, nombre: "Gancho de aluminio", precio: 8990, img:{% static 'core/img/accesorios/gancho_patin1.jpeg' %}},
-            {id: 10, nombre: "Gancho de plastico", precio: 4990, img:{% static 'core/img/accesorios/gancho_patin2.jpg' %}},
-            {id: 11, nombre: "Mochila KRF mujer", precio: 49990, img:{% static 'core/img/accesorios/mochila_patin1.jpg' %}},
-            {id: 12, nombre: "Jockey Steigen Café", precio: 49990, img:{% static 'core/img/accesorios/mochila_patin2.jpg' %}},
-        ]
+            {id: 7, nombre: "Conos FR", precio: 11990, img: "{% static 'core/img/accesorios/conos1.png' %}"},
+            {id: 8, nombre: "Funda protectora de ruedas", precio: 4990, img: "{% static 'core/img/accesorios/funda_rueda1.jpg' %}"},
+            {id: 9, nombre: "Gancho de aluminio", precio: 8990, img: "{% static 'core/img/accesorios/gancho_patin1.jpeg' %}"},
+            {id: 10, nombre: "Gancho de plástico", precio: 4990, img: "{% static 'core/img/accesorios/gancho_patin2.jpg' %}"},
+            {id: 11, nombre: "Mochila KRF mujer", precio: 49990, img: "{% static 'core/img/accesorios/mochila_patin1.jpg' %}"},
+            {id: 12, nombre: "Jockey Steigen Café", precio: 49990, img: "{% static 'core/img/accesorios/mochila_patin2.jpg' %}"},
+        ];
+
+
+    
+    
 
         let carrito = [];
 
@@ -250,22 +253,22 @@
         // Cargar productos al cargar la página
         cargarProductos();
     </script>
-   <footer>
-        <div class="container">
-            <p>&copy; 2025 Tienda RollerSkate - Todos los derechos reservados</p>
-            <p>
-                <a href="mailto:tiendaroller@gmail.com" class="text-warning">
-                    <i class="fa-solid fa-envelope"></i> Contacto
-                </a> |
-                <a href="https://www.instagram.com/tu_tienda" class="icon-instagram" target="_blank">
-                    <i class="fa-brands fa-instagram"></i> Instagram
-                </a> |
-                <a href="https://www.facebook.com/tu_tienda" class="text-warning">
-                    <i class="fa-brands fa-facebook"></i> Facebook
-                </a>
-            </p>
-        </div>
-    </footer>
+   <footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Tienda RollerSkate - Todos los derechos reservados</p>
+        <p>
+            <a href="mailto:tiendaroller@gmail.com" class="text-warning">
+                <i class="fa-solid fa-envelope"></i> Contacto
+            </a> |
+            <a href="https://www.instagram.com/tu_tienda" class="icon-instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a> |
+            <a href="https://www.facebook.com/tu_tienda" class="text-warning">
+                <i class="fa-brands fa-facebook"></i> Facebook
+            </a>
+        </p>
+    </div>
+</footer>
     <!-- JS -->
     <!-- Validaciones -->
     <script src="validaciones.js"></script>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vestimenta</title>
-    <link rel="stylesheet" href={% static 'core/css/style.css'%}>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -162,15 +162,15 @@
     <script>
         // Productos disponibles
         const productos = [
-            {id: 35, nombre: "Calcetines Steigen Naranjo", precio: 14990, img: "img/vestimenta/calceta 1.jpeg"},
-            {id: 36, nombre: "Calcetines Steigen Verde", precio: 14990, img: "img/vestimenta/calceta 2.jpeg"},
-            {id: 37, nombre: "Calcetines Steigen Morado", precio: 14990, img: "img/vestimenta/calceta 3.jpeg"},
-            {id: 38, nombre: "Jockey Steigen negro", precio: 9990, img: "img/vestimenta/jockey1.jpeg"},
-            {id: 39, nombre: "Jockey Steigen Azul", precio: 9990, img: "img/vestimenta/jockey2.jpeg"},
-            {id: 40, nombre: "Jockey Steigen Café", precio: 9990, img: "img/vestimenta/jockey3.jpeg"},
-            {id: 41, nombre: "Gafas Steigen Bblue", precio: 17500, img: "img/vestimenta/lentes1.jpeg"},
-            {id: 42, nombre: "Gafas Steigen Wblue", precio: 21500, img: "img/vestimenta/lentes2.jpeg"},
-            {id: 43, nombre: "Gafas Steigen Wred", precio: 19500, img: "img/vestimenta/lentes3.jpeg"},
+            {id: 35, nombre: "Calcetines Steigen Naranjo", precio: 14990, img: "{% static 'core/img/vestimenta/calceta 1.jpeg' %}"},
+            {id: 36, nombre: "Calcetines Steigen Verde", precio: 14990, img: "{% static 'core/img/vestimenta/calceta 2.jpeg' %}"},
+            {id: 37, nombre: "Calcetines Steigen Morado", precio: 14990, img: "{% static 'core/img/vestimenta/calceta 3.jpeg' %}"},
+            {id: 38, nombre: "Jockey Steigen negro", precio: 9990, img: "{% static 'core/img/vestimenta/jockey1.jpeg' %}"},
+            {id: 39, nombre: "Jockey Steigen Azul", precio: 9990, img: "{% static 'core/img/vestimenta/jockey2.jpeg' %}"},
+            {id: 40, nombre: "Jockey Steigen Café", precio: 9990, img: "{% static 'core/img/vestimenta/jockey3.jpeg' %}"},
+            {id: 41, nombre: "Gafas Steigen Bblue", precio: 17500, img: "{% static 'core/img/vestimenta/lentes1.jpeg' %}"},
+            {id: 42, nombre: "Gafas Steigen Wblue", precio: 21500, img: "{% static 'core/img/vestimenta/lentes2.jpeg' %}"},
+            {id: 43, nombre: "Gafas Steigen Wred", precio: 19500, img: "{% static 'core/img/vestimenta/lentes3.jpeg' %}"},
             
         ]
 
@@ -255,7 +255,7 @@
         cargarProductos();
     </script>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Tienda RollerSkate - Todos los derechos reservados</p>
             <p>

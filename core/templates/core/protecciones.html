@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href={% static 'core/css/style.css'%}>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -164,16 +164,16 @@
     <script>
         // Productos disponibles
         const productos = [
-            { id: 13, nombre: "Casco Oxelo Blanco", precio: 19990, img: "img/protecciones/casco1.jpeg" },
-            { id: 14, nombre: "Casco Oxelo Negro", precio: 19990, img: "img/protecciones/casco2.jpeg" },
-            { id: 15, nombre: "Casco Oxelo Rosa", precio: 19990, img: "img/protecciones/casco3.jpeg" },
-            { id: 16, nombre: "Casco Oxelo Black Light", precio: 29990, img: "img/protecciones/casco4.jpg" },
-            { id: 17, nombre: "Coderas 187", precio: 7990, img: "img/protecciones/coderas1.jpeg" },
-            { id: 18, nombre: "Guantes para deslizar", precio: 29990, img: "img/protecciones/guantes_deslizantes1.jpg" },
-            { id: 19, nombre: "Rodilleras Smith AP Rosa", precio: 27500, img: "img/protecciones/rodillera2.png" },
-            { id: 20, nombre: "Rodilleras REKD", precio: 32500, img: "img/protecciones/rodilleras1.jpg" },
-            { id: 21, nombre: "Set protecciones generic", precio: 19500, img: "img/protecciones/set_proteccion1.jpg" },
-            { id: 22, nombre: "Set protecciones Micro", precio: 29500, img: "img/protecciones/set_proteccion2.jpg" }
+            { id: 13, nombre: "Casco Oxelo Blanco", precio: 19990, img: "{% static 'core/img/protecciones/casco1.jpeg' %}" },
+            { id: 14, nombre: "Casco Oxelo Negro", precio: 19990, img: "{% static 'core/img/protecciones/casco2.jpeg' %}" },
+            { id: 15, nombre: "Casco Oxelo Rosa", precio: 19990, img: "{% static 'core/img/protecciones/casco3.jpeg' %}" },
+            { id: 16, nombre: "Casco Oxelo Black Light", precio: 29990, img: "{% static 'core/img/protecciones/casco4.jpg' %}" },
+            { id: 17, nombre: "Coderas 187", precio: 7990, img: "{% static 'core/img/protecciones/coderas1.jpeg' %}" },
+            { id: 18, nombre: "Guantes para deslizar", precio: 29990, img: "{% static 'core/img/protecciones/guantes_deslizantes1.jpg' %}" },
+            { id: 19, nombre: "Rodilleras Smith AP Rosa", precio: 27500, img: "{% static 'core/img/protecciones/rodillera2.png' %}" },
+            { id: 20, nombre: "Rodilleras REKD", precio: 32500, img: "{% static 'core/img/protecciones/rodilleras1.jpg' %}" },
+            { id: 21, nombre: "Set protecciones generic", precio: 19500, img: "{% static 'core/img/protecciones/set_proteccion1.jpg' %}" },
+            { id: 22, nombre: "Set protecciones Micro", precio: 29500, img: "{% static 'core/img/protecciones/set_proteccion2.jpg' %}" }
         ];
 
         let carrito = [];
@@ -256,7 +256,7 @@
         // Cargar productos al cargar la página
         cargarProductos();
     </script>
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Tienda RollerSkate - Todos los derechos reservados</p>
             <p>
