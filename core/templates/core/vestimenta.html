@@ -14,19 +14,19 @@
     <header>
         <!--TITULO o LOGO-->
         <div class="container-fluid" id="con_header">
-            <div class="row allign-items-center">
-                <div class="col mx-5">
+            <div class="row align-items-center">
+                <div class="col-12 col-sm-6 col-md-4 text-center text-sm-start mb-sm-0">
                     <a href="https://www.youtube.com/watch?v=DbH0_xqR26c&t=81s" title="video demostración" target="_blank">
                         <img class="h-100 d-inline-block"  style="width: 150px;" src={% static 'core/img/Diseño_sin_título-removebg-preview.png' %} alt="logo mercado libre ">
                     </a>
                     <!-- Button to trigger the modal -->
                 </div>
-                <div class="col my-5 mx-5 d-flex position-relative justify-content-end">
+                <div class="col-12 col-sm-6 col-md-8 text-center text-sm-end">
                     <div class="btn-group" role="group" aria-label="btn-session">                   
-                        <button type="button" class="btn btn-outline-dark text-success" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#loginModal">
                         Iniciar Sesion
                         </button>
-                        <button type="button" class="btn btn-outline-dark text-success" data-bs-toggle="modal" data-bs-target="#crearCuenta">
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#crearCuenta">
                         Crear Cuenta
                         </button>
                         <div class="col">
@@ -92,9 +92,9 @@
                 </div>
             </div>
             <!-- Barra de navegacion-->
-            <div class="container-fkuid">
+            <div class="container-fluid" id="con_navbar">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12 col-sm-12 col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                             <div class="container-fluid">
                                 <a class="navbar-brand" href={% url 'home' %}>RollerSkate</a>
@@ -125,10 +125,10 @@
                                     </li>
                                 </ul>
                                 <!-- Buscador-->
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search">
-                                    <button class="btn btn-dark" type="submit">
-                                        <i class="fa-solid fa-magnifying-glass"></i>Buscar
+                                <form class="d-flex align-items-center" role="search">
+                                    <input class="form-control" type="search" placeholder="Buscar producto" aria-label="Search">
+                                    <button class="btn btn-dark align-items-center" type="submit">
+                                        <i class="fa-solid fa-magnifying-glass m-1"></i>Buscar
                                     </button>
                                 </form>
                                 </div>
@@ -139,25 +139,33 @@
             </div>
         </div>
     </header>
+    <main>
+        <div class="container-fluid p-3">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-12 col-md-12 m-0">
+                    <!--Productos en venta-->
+                    <div class="container mt-4">
+                        <h1 class="text-center mb-4">Accesorios para patinar</h1>
+                        <div class="row" id="productos-container">
 
-    <!--Productos en venta-->
-    <div class="container mt-4">
-        <h1 class="text-center mb-4">Accesorios para patinar</h1>
-        <div class="row" id="productos-container">
+                        </div>
+                    </div>    
+                            
+                    <!-- Carrito de Compras -->
+                    <div class="container mt-5"></div>
+                        <h2 class="text-center">🛒 Carrito de Compras</h2>
+                        <ul class="list-group mb-3" id="carrito-lista"></ul>
+                        <p class="fw-bold text-center">Total: <span id="total-carrito">$0</span></p>
+                        <div class="text-center">
+                            <button class="btn btn-success" onclick="realizarCompra()">Finalizar Compra</button>
+                            <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar Carrito</button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </main>
 
-        </div>
-    </div>    
-            
-    <!-- Carrito de Compras -->
-    <div class="container mt-5"></div>
-        <h2 class="text-center">🛒 Carrito de Compras</h2>
-        <ul class="list-group mb-3" id="carrito-lista"></ul>
-        <p class="fw-bold text-center">Total: <span id="total-carrito">$0</span></p>
-        <div class="text-center">
-            <button class="btn btn-success" onclick="realizarCompra()">Finalizar Compra</button>
-            <button class="btn btn-danger" onclick="vaciarCarrito()">Vaciar Carrito</button>
-        </div>
-    </div> 
 
     <script>
         // Productos disponibles

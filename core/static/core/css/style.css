@@ -1,25 +1,67 @@
 /* Ajuste del header */
-header {
+#con_header {
     position: static;
-    height: 250px;
-    padding: 0;
-
-}
-body{
+    height: 180px;
     margin: 0;
-    padding-top: 56px;
+    padding: 15px 0;
     width: 100%;
-    height: 850px;
 }
-/* Contenedor principal */
-.container-fluid {
-    position: static;
+#con_header img {
+    padding: 0;
+    margin-left: 45px;
+    height: 100%;
+}
+#con_header .btn-group{
+    padding: 10px;
+    margin-right: 20px;
+}
+#con_header .btn-group .btn{
+    font-weight: bold;
+    padding: 10px 20px;
+    color: white;
+    border-width: 7px 0;
+    border-color: #3c3b3b;
+}
+#con_header .btn-group [data-bs-target="#loginModal"]{
+    border-radius: 15px 0 0 15px;
+}
+#con_header .btn-group [data-bs-target="#crearCuenta"]{
+    border-radius: 0 15px 15px 0;
+}
+#con_navbar{
+    border-radius: 15px 0 0 15px;
+    position: relative;
+    padding: 15px 0;
+    margin: 0;
+}
+#con_navbar [role="search"]{
+    font-weight: bold;
+    font-size: 1.7rem;
+    width: 20%;
+    height: 42px;
+
+}
+form[role="search"] .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px; /* Ajusta el padding del botón */
+}
+form[role="search"] .i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px; /* Ajusta el padding del botón */
 }
 
+#carouselNoticias .c-item{
+    width: 100%;
+    height: 450px;
+}
 /* Estilos del carrusel */
 .c-item {
-    height: 500px;
-    position: relative; 
+    width: 100%;
+    position: static; 
     
 }
 .c-img {
@@ -150,32 +192,68 @@ body{
     color: #ffa500;
 }
 
-/* Estilos para pantallas pequeñas */
+/* Estilos para pantallas pequeñas -REVISADO- */
 @media (max-width: 576px) {
+    *{
+        height: auto;
+        align-items: center;
+    }
     .navbar-brand {
         font-size: 1.2rem;
     }
     .c-item {
-        height: 200px;
+        height: 300px;
+    }
+    #con_navbar [role="search"]{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    #con_header {
+        height: 250px;
+        padding: 0;
+        width: 100%;    
+    }
+    #con_header .btn-group {
+        align-items: center;
     }
 }
 
-/* Estilos para pantallas medianas */
-@media (min-width: 768px) {
-    .navbar-brand {
-        font-size: 1.5rem;
-    }
-    .c-item {
-        height: 200px;
-    }
-}
 
-/* Estilos para pantallas grandes */
-@media (min-width: 1200px) {
+@media(max-width:1024px){
+    *{
+        align-items: center;
+        height: auto;
+
+    }
     .navbar-brand {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
     .c-item {
-        height: 200px;
+        height: 10px;
     }
+    #con_navbar [role="search"]{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+    #con_header {
+        height: 250px;
+        padding: 0;
+        width: 100%;    
+    }
+    #con_header .btn-group {
+        align-items: center;
+    }
+    .footer {
+        width: 100%;
+        height: 200px;
+        padding: 1px 0;
+        margin: 0;
+
+    }
+    .footer .container p{
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+
 }
