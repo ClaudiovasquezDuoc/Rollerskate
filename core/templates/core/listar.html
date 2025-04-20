@@ -1,0 +1,41 @@
+{% extends 'core/base_generic.html' %}
+
+
+{% block title %}Listado de Productos{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Listado de Productos</h1>
+{% if user.is_superuser %}
+<a href="{% url 'crear_producto' %}" class="btn btn-success mb-3">+ Crear nuevo producto</a>
+{% endif %}
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for producto in productos %}
+        <tr>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.descripcion }}</td>
+            <td>${{ producto.precio }}</td>
+            <td>
+                {% if user.is_superuser %}
+                <a href="{% url 'editar_producto' producto.id %}" class="btn btn-primary btn-sm">Editar</a>
+                <a href="{% url 'eliminar_producto' producto.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+                {% else %}
+                <span class="text-muted">Solo lectura</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4">No hay productos registrados.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
