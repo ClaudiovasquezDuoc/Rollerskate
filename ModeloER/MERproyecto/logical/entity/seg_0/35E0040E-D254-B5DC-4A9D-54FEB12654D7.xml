@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="35E0040E-D254-B5DC-4A9D-54FEB12654D7" name="PROVEEDOR">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 19:45:01 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_proveedor" id="07CC15E7-4925-0005-6307-7C431EA75929">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 19:49:33 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="6EFBF0C2-E970-9C32-FB66-789506BE89A0">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 19:49:46 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="214AEC98-5E31-D826-882F-DA350AD3AA1C">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 19:50:00 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_proveedor1" id="019B87C1-F184-70EE-C164-07D34027CD22">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:06:05 UTC</createdTime>
+<generatorID>D3786005-63C6-DEA8-3140-B781FF520972</generatorID>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<referedAttribute>07CC15E7-4925-0005-6307-7C431EA75929</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_venta" id="34BCBA8B-8D96-67A2-9B3A-E21E0102190C">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:13:57 UTC</createdTime>
+<generatorID>DBBBF936-4718-03C0-506F-D0BCC2262714</generatorID>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<referedAttribute>7FBA3E52-D38A-757A-B568-CC51C5BAB470</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EFCD20A9-DDE4-AB3E-D8C6-061BF97C1994" name="PROVEEDOR PK">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 19:49:44 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>07CC15E7-4925-0005-6307-7C431EA75929</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

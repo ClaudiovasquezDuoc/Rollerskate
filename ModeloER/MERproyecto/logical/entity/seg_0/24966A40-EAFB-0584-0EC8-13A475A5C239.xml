@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="24966A40-EAFB-0584-0EC8-13A475A5C239" name="BOLETA_PRODUCTO">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:21:35 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_boleta" id="7E295E98-63D6-3A34-B05B-3D4D92A3341B">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:28:07 UTC</createdTime>
+<generatorID>3F10B136-E959-7FFC-8A89-7056E4A0D8D8</generatorID>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<referedAttribute>80E49B80-142D-5358-3B4B-F7E0B96BA47D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_producto" id="2D0B444F-005D-586E-917A-22FED8DD2C44">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:33:44 UTC</createdTime>
+<generatorID>3533284A-746E-B990-5C9E-BEE2B025DE2B</generatorID>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<referedAttribute>0DD1A76D-1C2A-555D-260B-B55CE55B77A6</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B90E7023-B79B-FFD4-CAFE-78A1E4799C9F" name="BOLETA_PRODUCTO PK">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:28:12 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<pk>true</pk>
+</identifier>
+</identifiers>
+</Entity>

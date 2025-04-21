@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="MER_RSK8" id="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" mainViewID="785D09BB-EE88-A194-4E16-9065F838544D">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 19:42:33 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

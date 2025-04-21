@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4468E8A0-54DA-2D25-8D6A-0E08F649F1AF" name="VENTAS">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 20:21:49 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_venta" id="7FBA3E52-D38A-757A-B568-CC51C5BAB470">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:04:09 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_venta" id="8F08F4EB-5B57-2E20-EE03-03C24CD0AC60">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:04:24 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cantidad" id="952F25B3-37BE-FCB9-1F62-EF14A63A5A1D">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:05:05 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total" id="A5C578E6-91B8-36A0-F8D3-ADFC585CA48F">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:05:24 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6143ACD6-B434-34F4-1B14-ED78949D522E" name="VENTAS PK">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:04:21 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7FBA3E52-D38A-757A-B568-CC51C5BAB470</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_4" directorySegmentName="seg_0" id="CB0E8EEC-109A-E0A1-E3A0-17C6DBC9B05E">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 21:10:56 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<engineerTo>
+<item key="0EB97DCC-A7DD-2ED5-BA23-A2B2A6028216" value="true"/>
+</engineerTo>
+<sourcePk>9EFDFC8B-6C59-E549-3017-A90F72DC50B5</sourcePk>
+<targetPk>B8B452C1-A9AE-7FF3-498D-4103F4BF67DA</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>58628BD2-8656-7D44-C4F7-64FE1313B694</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>6EF72B45-76CF-95D9-402B-D15B2AE147B2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
