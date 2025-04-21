@@ -78,7 +78,7 @@ def registro_usuario(request):
 # EDICIÓN DE PERFIL
 # --------------------------
 
-
+@login_required
 def editar_perfil(request):
     if request.method == 'POST':
         form = EditarUsuarioForm(request.POST, instance=request.user)
