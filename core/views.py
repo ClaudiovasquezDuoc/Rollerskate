@@ -37,6 +37,7 @@ def listar_productos(request):
     return render(request, 'core/listar.html', {'productos': productos})
 
 @login_required
+@staff_member_required
 def crear_producto(request):
     form = ProductoForm(request.POST or None)
     if form.is_valid():
@@ -45,6 +46,7 @@ def crear_producto(request):
     return render(request, 'core/crear.html', {'form': form})
 
 @login_required
+@staff_member_required
 def editar_producto(request, pk):
     producto = get_object_or_404(Producto, pk=pk)
     form = ProductoForm(request.POST or None, instance=producto)
@@ -54,6 +56,7 @@ def editar_producto(request, pk):
     return render(request, 'core/editar.html', {'form': form, 'producto': producto})
 
 @login_required
+@staff_member_required
 def eliminar_producto(request, pk):
     producto = get_object_or_404(Producto, pk=pk)
     if request.method == 'POST':
@@ -96,3 +99,21 @@ def editar_perfil(request):
 
     return render(request, 'core/editar_perfil.html', {'form': form})
 
+
+from rest_framework import generics
+from .models import Producto
+from .serializers import ProductoSerializer
+from rest_framework import serializers
+
+class ProductoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Producto
+        fields = '__all__'
+
+class ProductoListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
+
+class ProductoRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
