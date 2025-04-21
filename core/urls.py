@@ -2,6 +2,8 @@ from django.urls import path
 from .views import home, accesorios, patines, protecciones, repuestos, servicio, vestimenta
 from . import views
 from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth import views as auth_views
+
 
 urlpatterns = [
     path('', home, name='home'),
@@ -15,9 +17,14 @@ urlpatterns = [
     path('crear_producto/', views.crear_producto, name='crear_producto'),
     path('editar_producto/<int:pk>/', views.editar_producto, name='editar_producto'),
     path('eliminar_producto/<int:pk>/', views.eliminar_producto, name='eliminar_producto'),
-    path('login/', LoginView.as_view(template_name='login.html'), name='login'),
+    path('login/', LoginView.as_view(template_name='core/login.html'), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('perfil/', views.editar_perfil, name='editar_perfil'),
+    path('registro/', views.registro_usuario, name='registro'),
+    path('recuperar/', auth_views.PasswordResetView.as_view(template_name='core/recuperar.html'), name='password_reset'),
+    path('recuperar/enviado/', auth_views.PasswordResetDoneView.as_view(template_name='recuperar_enviado.html'), name='password_reset_done'),
+    path('recuperar/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='restablecer_confirmar.html'), name='password_reset_confirm'),
+    path('recuperar/completo/', auth_views.PasswordResetCompleteView.as_view(template_name='restablecer_completo.html'), name='password_reset_complete'),
 
 
 ]

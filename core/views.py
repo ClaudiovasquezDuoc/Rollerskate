@@ -31,10 +31,12 @@ def vestimenta(request):
 
 # otros
 
+@login_required
 def listar_productos(request):
     productos = Producto.objects.all()
     return render(request, 'core/listar.html', {'productos': productos})
 
+@login_required
 def crear_producto(request):
     form = ProductoForm(request.POST or None)
     if form.is_valid():
@@ -42,6 +44,7 @@ def crear_producto(request):
         return redirect('listar_productos')
     return render(request, 'core/crear.html', {'form': form})
 
+@login_required
 def editar_producto(request, pk):
     producto = get_object_or_404(Producto, pk=pk)
     form = ProductoForm(request.POST or None, instance=producto)
@@ -50,13 +53,14 @@ def editar_producto(request, pk):
         return redirect('listar_productos')
     return render(request, 'core/editar.html', {'form': form, 'producto': producto})
 
-
+@login_required
 def eliminar_producto(request, pk):
     producto = get_object_or_404(Producto, pk=pk)
     if request.method == 'POST':
         producto.delete()
         return redirect('listar_productos')
     return render(request, 'core/eliminar.html', {'producto': producto})
+
 
 def registro_usuario(request):
     if request.method == 'POST':
@@ -67,14 +71,14 @@ def registro_usuario(request):
             return redirect('listar_productos')
     else:
         form = RegistroForm()
-    return render(request, 'registro.html', {'form': form})
+    return render(request, 'core/registro.html', {'form': form})
 
 
 # --------------------------
 # EDICIÓN DE PERFIL
 # --------------------------
 
-@login_required
+
 def editar_perfil(request):
     if request.method == 'POST':
         form = EditarUsuarioForm(request.POST, instance=request.user)
@@ -90,5 +94,5 @@ def editar_perfil(request):
     else:
         form = EditarUsuarioForm(instance=request.user)
 
-    return render(request, 'editar_perfil.html', {'form': form})
+    return render(request, 'core/editar_perfil.html', {'form': form})
 

@@ -29,7 +29,10 @@
                         <a class="nav-link" href="{% url 'editar_perfil' %}">Mi Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger" href="{% url 'logout' %}">Cerrar sesión</a>
+                        <form method="post" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="nav-link btn btn-link text-danger p-0" style="text-decoration: none;">Cerrar sesión</button>
+                        </form>
                     </li>
                 {% else %}
                     <li class="nav-item">
