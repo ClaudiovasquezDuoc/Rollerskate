@@ -86,9 +86,11 @@ WSGI_APPLICATION = 'RollerSkate.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'BD_roller',  # Alias definido en el archivo tnsnames.ora
-        'USER': 'admin_roller',
-        'PASSWORD': 'OracleCloud123',
+        'NAME': 'orcl',  # Alias definido en el archivo tnsnames.ora
+        'USER': 'c##django1',
+        'PASSWORD': 'django123',
+        'HOST': 'localhost',
+        'PORT': '1521'
     }
 }
 
