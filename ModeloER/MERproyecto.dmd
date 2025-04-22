@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="MERproyecto" id="582558EC-F937-C1DB-98EF-47FB6309A362" version="3.5">
+<createdBy>dmart</createdBy>
+<createdTime>2025-04-21 19:42:30 UTC</createdTime>
+<ownerDesignName>MERproyecto</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>582558EC-F937-C1DB-98EF-47FB6309A362</designId>
+</OSDM_Design>
