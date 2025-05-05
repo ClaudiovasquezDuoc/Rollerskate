@@ -3,8 +3,14 @@ from .views import home, accesorios, patines, protecciones, repuestos, servicio,
 from . import views
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth import views as auth_views
-
 from .views import ProductoListCreateAPIView, ProductoRetrieveUpdateDestroyAPIView
+
+api_patterns = [
+    path('productos/', ProductoListCreateAPIView.as_view(), name='api_productos'),
+    path('productos/<int:pk>/', ProductoRetrieveUpdateDestroyAPIView.as_view(), name='api_producto_detail'),
+    path('api/ciclovias/', views.obtener_ciclovias, name='ciclovias'),
+
+]
 
 urlpatterns = [
     path('', home, name='home'),

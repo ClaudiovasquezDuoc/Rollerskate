@@ -5,6 +5,8 @@ from django.shortcuts import redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib.auth import login
+import requests
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -39,10 +41,14 @@ def listar_productos(request):
 @login_required
 @staff_member_required
 def crear_producto(request):
-    form = ProductoForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        return redirect('listar_productos')
+    if request.method == 'POST':
+        form = ProductoForm(request.POST )
+        if form.is_valid():
+            form.save()
+            return redirect('listar_productos')
+        return render(request, 'core/crear.html', {'form': form})
+    else:
+        form = ProductoForm()
     return render(request, 'core/crear.html', {'form': form})
 
 @login_required
@@ -98,6 +104,25 @@ def editar_perfil(request):
         form = EditarUsuarioForm(instance=request.user)
 
     return render(request, 'core/editar_perfil.html', {'form': form})
+
+def obtener_ciclovias(request):
+    query = """
+    [out:json];
+    area["name"="Santiago"]["admin_level"="8"]->.searchArea;
+    (
+      way["highway"="cycleway"](area.searchArea);
+    );
+    out body;
+    >;
+    out skel qt;
+    """
+    url = 'https://overpass-api.de/api/interpreter'
+    response = requests.post(url, data={'data': query})
+
+    if response.status_code == 200:
+        return JsonResponse(response.json())
+    else:
+        return JsonResponse({'error': 'No se pudo obtener datos'}, status=500)
 
 
 from rest_framework import generics

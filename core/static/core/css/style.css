@@ -191,6 +191,64 @@ form[role="search"] .i {
 .footer-icons .email:hover {
     color: #ffa500;
 }
+#clima-container {
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin: 20px auto; /* Centra el contenedor */
+}
+/* Estilo para clima cálido */
+#clima-container .calor {
+    background-color: #ffcccb; /* Rojo claro */
+    color: #b22222; /* Rojo oscuro */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para clima frío */
+#clima-container .frio {
+    background-color: #add8e6; /* Azul claro */
+    color: #00008b; /* Azul oscuro */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para clima templado */
+#clima-container .templado {
+    background-color: #90ee90; /* Verde claro */
+    color: #006400; /* Verde oscuro */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Centrar el mapa y darle margen */
+#map-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 20px auto; /* Margen superior e inferior */
+    max-width: 90%; /* Limita el ancho máximo */
+  }
+  
+  /* Ajustar el tamaño del mapa */
+  #map {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 300px; /* Altura fija */
+    border: 2px solid #ccc; /* Borde opcional */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+  }
+  @media (max-width: 768px) {
+    #map {
+      height: 180px; /* Reduce la altura en pantallas pequeñas */
+    }
+  }
+
+
+
 
 /* Estilos para pantallas pequeñas -REVISADO- */
 @media (max-width: 576px) {

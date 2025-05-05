@@ -11,7 +11,7 @@ def temperatura_clima(request):
         response = requests.get(url, timeout=5)
         if response.status_code == 200:
             data = response.json()
-            valor = data['current_weather']['temperature']
+            valor = float(data['current_weather']['temperature'])
             return {'temperatura_clima': round(valor, 2)}
     except Exception as e:
         print(f"Error: {e}")
