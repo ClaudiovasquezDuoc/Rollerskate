@@ -50,3 +50,4 @@ class EditarUsuarioForm(forms.ModelForm):
             validate_password(password1)
 
         return cleaned_data
+    

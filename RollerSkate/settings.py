@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'rest_framework',
+    
 ]
 
 LOGIN_REDIRECT_URL = '/'
@@ -86,7 +87,7 @@ WSGI_APPLICATION = 'RollerSkate.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'orcl',  # Alias definido en el archivo tnsnames.ora
+        'NAME': 'xe',  # Alias definido en el archivo tnsnames.ora
         'USER': 'c##django1',
         'PASSWORD': 'django123',
         'HOST': 'localhost',
