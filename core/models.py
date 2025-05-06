@@ -61,12 +61,17 @@ class Boleta(models.Model):
         verbose_name_plural = "Boletas"
         ordering = ['-fecha_boleta']
 
+from django.contrib.auth.models import User
+
 class Ventas(models.Model):
     id_cliente = models.ForeignKey(Cliente, on_delete=models.PROTECT, related_name='ventas')
     id_producto = models.ForeignKey(Producto, on_delete=models.PROTECT, related_name='ventas')
     fecha_venta = models.DateField(auto_now_add=True)
     cantidad = models.IntegerField(validators=[MinValueValidator(1)])
     total = models.DecimalField(max_digits=10, decimal_places=2)
+    
+    
+    usuario = models.ForeignKey(User, on_delete=models.PROTECT, related_name='ventas', null=True)
 
     def __str__(self):
         return f"Venta {self.id} - Cliente: {self.id_cliente.nombre}"
@@ -75,3 +80,6 @@ class Ventas(models.Model):
         verbose_name = "Venta"
         verbose_name_plural = "Ventas"
         ordering = ['-fecha_venta']
+
+
+    

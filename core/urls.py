@@ -4,7 +4,7 @@ from . import views
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth import views as auth_views
 
-from .views import ProductoListCreateAPIView, ProductoRetrieveUpdateDestroyAPIView
+from .views import ProductoListCreateAPIView, ProductoRetrieveUpdateDestroyAPIView, VentasListCreateAPIView
 
 urlpatterns = [
     path('', home, name='home'),
@@ -28,6 +28,11 @@ urlpatterns = [
     path('recuperar/completo/', auth_views.PasswordResetCompleteView.as_view(template_name='core/restablecer_completo.html'), name='password_reset_complete'),
     path('api/productos/', ProductoListCreateAPIView.as_view(), name='api_productos'),
     path('api/productos/<int:pk>/', ProductoRetrieveUpdateDestroyAPIView.as_view(), name='api_producto_detail'),
+    path('api/ventas/', VentasListCreateAPIView.as_view(), name='api_ventas'),
+    path('carrito/', views.carrito, name='carrito'),
+    path('procesar_venta/', views.procesar_Venta, name='procesar_venta'),
+    
+   
 
 
 ]

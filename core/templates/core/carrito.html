@@ -1,0 +1,80 @@
+{% extends 'core/base_generic.html' %}
+
+{% block content %}
+<h2>Carrito de Compras</h2>
+
+<form id="ventaForm">
+    <!-- Selección de Cliente -->
+    <label for="cliente">Seleccionar Cliente:</label>
+    <select id="cliente" class="form-control">
+        {% for cliente in clientes %}
+            <option value="{{ cliente.id }}">{{ cliente.nombre }}</option>
+        {% endfor %}
+    </select>
+
+    <br><br>
+
+    <!-- Tabla de productos -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in productos %}
+            <tr>
+                <td>{{ item.producto.nombre }}</td>
+                <td>${{ item.producto.precio }}</td>
+                <td>
+                    <input type="number" class="cantidad" data-id="{{ item.producto.id }}" value="{{ item.cantidad }}">
+                </td>
+                <td>${{ item.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Botón para confirmar la venta -->
+    <button type="button" class="btn btn-success" onclick="enviarVenta()">Confirmar Venta</button>
+</form>
+
+<script>
+function enviarVenta() {
+    const cliente_id = document.getElementById('cliente').value;  // Obtenemos el ID del cliente
+    const inputs = document.querySelectorAll('.cantidad');
+    let productos = [];
+
+    inputs.forEach(input => {
+        const cantidad = parseInt(input.value);
+        if (cantidad > 0) {
+            productos.push({
+                id: input.getAttribute('data-id'),
+                cantidad: cantidad
+            });
+        }
+    });
+
+    // Enviar la venta a través de fetch
+    fetch("{% url 'procesar_venta' %}", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{ csrf_token }}'
+        },
+        body: JSON.stringify({ 
+            cliente_id: cliente_id,  // Incluimos el ID del cliente
+            productos: productos 
+        })
+    })
+    .then(res => res.json())
+    .then(data => alert(data.mensaje))
+    .catch(err => alert("Ocurrió un error. Inténtalo de nuevo."));
+}
+</script>
+
+{% endblock %}
+
