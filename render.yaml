@@ -1,8 +1,9 @@
+# filepath: c:\Users\claud\projects\html proyectos\roller\Rollerskate\render.yaml
 services:
   - type: web
     name: rollerskate
     env: python
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
     startCommand: "gunicorn RollerSkate.wsgi:application --bind 0.0.0.0:$PORT"
     envVars:
       - key: DEBUG
