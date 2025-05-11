@@ -9,6 +9,6 @@ services:
       - key: DEBUG
         value: "False"
       - key: ALLOWED_HOSTS
-        value: "your-app-name.onrender.com"
+        value: "rollerskate-tjsj.onrender.com/"
       - key: DATABASE_URL
         value: "postgresql://rollerskate_db_user:82jpKL5aQ0h8XQVbCIe7EbkjRPZxa5s2@dpg-d0g2rrqdbo4c73avclag-a/rollerskate_db" # Reemplaza con tu URL
