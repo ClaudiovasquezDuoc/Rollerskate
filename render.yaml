@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rollerskate
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn RollerSkate.wsgi:application --bind 0.0.0.0:$PORT"
+    envVars:
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: "your-app-name.onrender.com"
+      - key: DATABASE_URL
+        value: "postgresql://rollerskate_db_user:82jpKL5aQ0h8XQVbCIe7EbkjRPZxa5s2@dpg-d0g2rrqdbo4c73avclag-a/rollerskate_db" # Reemplaza con tu URL
